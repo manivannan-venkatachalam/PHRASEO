@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Slideshow</title>
+    <link href="./asset/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>PHRASEO</h2>
+      <div class="slider">
+        <div class="gradient"></div>
+        <h1>Take on<br /><span>2023</span><br />with more gusto!!</h1>
+      </div>
+      <div class="slider">
+        <div class="gradient"></div>
+        <h1>Dance off to a<br /><span>BANG</span><br />this New Year!</h1>
+      </div>
+      <div class="slider">
+        <div class="gradient"></div>
+        <h1>Brew some<br /><span>FUN</span><br />in the New Year.</h1>
+      </div>
+      <div class="slider">
+        <div class="gradient"></div>
+        <h1>It’s<br /><span>2023</span><br />let’s whoop it up!</h1>
+      </div>
+      <article class="footer">
+        <div>
+          <div>
+            <h3>
+              Phraseo Management & <br />
+              Research Pvt Ltd
+            </h3>
+          </div>
+          <div class="address">
+            <span>
+              Unit No 2201A, 22nd Floor, <br />
+              World Trade Centre Bangalore, <br />
+              Brigade Gateway, <br />
+              Malleswaram, <br />
+              Bangalore - 560055
+            </span>
+          </div>
+        </div>
+        <div class="social">
+          <div>
+            <img src="./asset/img/ri_whatsapp-fill.png" />
+            <p>+91 70222 68186</p>
+          </div>
+          <div>
+            <img src="./asset/img/ic_round-email.png" />
+            <p>hi@phraseo.in</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      const imgs = document.querySelectorAll(".container .slider");
+
+      let currentIndex = 0;
+      let time = 4000;
+
+      const defClass = (startPos, index) => {
+        for (let i = startPos; i < imgs.length; i++) {
+          imgs[i].style.display = "none";
+        }
+        imgs[index].style.display = "block";
+      };
+
+      defClass(1, 0);
+
+      const startAutoSlide = () => {
+        setInterval(() => {
+          currentIndex >= imgs.length - 1 ? (currentIndex = 0) : currentIndex++;
+          defClass(0, currentIndex);
+        }, time);
+      };
+
+      startAutoSlide();
+    </script>
+  </body>
+</html>
