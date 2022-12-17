@@ -8,14 +8,14 @@
   src: url(../fonts/Vogue.ttf);
 }
 
-@keyframes fade {
+/* @keyframes fade {
   from {
     opacity: 0.1;
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 .slider {
   height: 100%;
@@ -39,13 +39,13 @@
 }
 
 .slider:nth-child(2) {
-  background: url("../img/image2.jpg");
+  background: url("../img/image1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .slider:nth-child(3) {
-  background: url("../img/image4.jpg");
+  background: url("../img/image2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -57,7 +57,7 @@
 }
 
 .slider:nth-child(5) {
-  background: url("../img/image1.jpg");
+  background: url("../img/image4.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -82,21 +82,29 @@ h2 {
   z-index: 11111111111;
 }
 
-div h1 {
-  position: absolute;
-  font-size: 5vw;
-  color: #fff;
-  font-family: "EB Garamond", serif;
-  font-weight: 400;
-  text-align: center;
+.hero-content {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 8.8vw;
   z-index: 11111111;
+  width: 100%;
+  background: transparent;
 }
 
-div h1 span {
+.hero-content h2 {
+  font-size: 5vw;
+  color: #fff;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  text-align: center;
+  position: initial;
+  top: initial;
+  background: none;
+  padding: initial;
+}
+
+.hero-content h1 {
   background: linear-gradient(
     0deg,
     #c89103 26.06%,
@@ -110,8 +118,10 @@ div h1 span {
   -webkit-text-fill-color: transparent;
   font-family: "vogue";
   font-size: 11.055vw;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: -2.5vw;
 }
-
 .footer {
   position: absolute;
   padding: 1.07vw 5.55vw;
@@ -213,16 +223,20 @@ div h1 span {
     background-size: 100%;
   }
 
-  div h1 {
-    font-size: 7.778vw;
+  .hero-content {
     bottom: initial;
-    top: 44vh;
+    top: 40vh;
     transform: translate(-50%, -50%);
     width: 100%;
   }
 
-  h1 span {
+  .hero-content h2 {
+    font-size: 7.778vw;
+  }
+
+  .hero-content h1 {
     font-size: 20.278vw;
+    margin-bottom: -4vw;
   }
 
   .footer {
@@ -267,13 +281,13 @@ div h1 span {
   }
 
   .social p {
-    font-size: 5.556vw;
+    font-size: 4.556vw;
   }
 }
 
 @media only screen and (max-width: 375px) {
   div h1 {
-    top: 52vh;
+    top: 44vh;
   }
 }
 
